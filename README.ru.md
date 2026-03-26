@@ -1,4 +1,4 @@
-# Nexus Runtime
+# NanoBlade
 
 Изолированный edge runtime для запуска пользовательских WebAssembly-плагинов через `Wasmtime` и WIT Component Model.
 
@@ -493,7 +493,7 @@ rustup target add wasm32-wasip2
 
 ## Итог
 
-`Nexus Runtime` безопасен не потому, что хост доверяет плагину, а потому что доверие минимально:
+`NanoBlade` безопасен не потому, что хост доверяет плагину, а потому что доверие минимально:
 
 - маленький WIT surface;
 - wasm sandbox;
