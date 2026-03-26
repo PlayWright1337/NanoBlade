@@ -1,4 +1,4 @@
-# Nexus Runtime
+# NanoBlade
 
 Isolated edge runtime for executing user-provided WebAssembly plugins with `Wasmtime` and the WIT Component Model.
 
@@ -495,7 +495,7 @@ Common causes are expensive logic, infinite loops, or an overly aggressive timeo
 
 ## Summary
 
-`Nexus Runtime` is safe not because the host blindly trusts plugins, but because trust is minimized:
+`NanoBlade Runtime` is safe not because the host blindly trusts plugins, but because trust is minimized:
 
 - small WIT surface;
 - wasm sandbox;
