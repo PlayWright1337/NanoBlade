@@ -1,0 +1,39 @@
+package nexus:runtime;
+
+interface host-log {
+    enum log-level {
+        trace,
+        debug,
+        info,
+        warn,
+        error,
+    }
+
+    write: func(level: log-level, message: string);
+}
+
+interface http-types {
+    record http-header {
+        name: string,
+        value: string,
+    }
+
+    record http-request {
+        method: string,
+        uri: string,
+        headers: list<http-header>,
+        body: list<u8>,
+    }
+
+    record http-response {
+        status: u16,
+        headers: list<http-header>,
+        body: list<u8>,
+    }
+}
+
+world nexus-plugin {
+    import host-log;
+    use http-types.{http-request, http-response};
+    export handle-request: func(request: http-request) -> http-response;
+}

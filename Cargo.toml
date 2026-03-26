@@ -1,0 +1,13 @@
+[package]
+name = "nexus-runtime"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+bytes = "1.10.1"
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread", "time"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.20", features = ["env-filter", "fmt"] }
+wasmtime = { version = "43.0.0", features = ["component-model", "component-model-async", "async", "wat"] }
+wasmtime-wasi = "43.0.0"
